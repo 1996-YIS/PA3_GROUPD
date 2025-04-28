@@ -19,10 +19,12 @@ jobs:
         node-version: '14'
     
     - name: Install dependencies
-      run: npm install -g jasmine
+      run: |
+        npm install -g jasmine
+        npm install  # Si tienes package.json con dependencias
     
     - name: Run tests
       run: |
-        jasmine --config=spec/support/jasmine.json
-        # O si usas un script personalizado:
-        # node run-tests.js
+        jasmine
+        # O si quieres ser explícito:
+        # jasmine --config=spec/support/jasmine.json
