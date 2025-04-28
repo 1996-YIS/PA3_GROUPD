@@ -1,23 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio de Proyectos</title>
-  <link rel="stylesheet" href="assets/css/estilos.css">
+  <meta name="description" content="Portafolio profesional de proyectos recientes que muestran mis habilidades y experiencia">
+  <meta name="keywords" content="portafolio, proyectos, desarrollo, diseño, profesional">
+  <meta name="author" content="Tu Nombre">
+  <meta property="og:title" content="Portafolio Profesional | Tu Nombre">
+  <meta property="og:description" content="Explora mis proyectos profesionales y mi trabajo reciente">
+  <meta property="og:type" content="website">
+  
+  <title>Portafolio Profesional | Tu Nombre</title>
+  
+  <!-- Preconexión para mejorar performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- Preload para recursos críticos -->
+  <link rel="preload" href="assets/js/app.js" as="script">
 </head>
 <body>
-  <header>
-    <h1>Mis Proyectos Recientes</h1>
-  </header>
-  
-  <section id="proyectos-container"></section>
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">TuNombre</a>
+      <ul class="nav-links">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menú móvil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-  <footer>
-    <p>&copy; 2025 Mi Portafolio</p>
+  <!-- Cabecera hero -->
+  <header class="hero">
+    <div class="container">
+      <h1 class="hero-title">Transformando ideas en experiencias digitales</h1>
+      <p class="hero-subtitle">Desarrollador y diseñador especializado en crear soluciones innovadoras</p>
+      <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+    </div>
+  </header>
+
+  <!-- Sección principal de proyectos -->
+  <main>
+    <section id="proyectos" class="section proyectos">
+      <div class="container">
+        <h2 class="section-title">Proyectos Recientes</h2>
+        <p class="section-subtitle">Una selección de mi trabajo más reciente</p>
+        
+        <div id="proyectos-container" class="proyectos-grid"></div>
+      </div>
+    </section>
+
+    <!-- Sección sobre mí -->
+    <section id="sobre-mi" class="section sobre-mi bg-light">
+      <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="sobre-mi-content">
+          <div class="sobre-mi-text">
+            <p>Profesional apasionado por el desarrollo y diseño con más de X años de experiencia creando soluciones digitales impactantes.</p>
+            <p>Especializado en tecnologías modernas y enfoques centrados en el usuario.</p>
+            <a href="#" class="btn btn-secondary">Descargar CV</a>
+          </div>
+          <div class="sobre-mi-image">
+            <img src="assets/img/foto-perfil.jpg" alt="Tu Nombre - Foto de perfil" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Contacto</h3>
+          <p>Email: <a href="mailto:contacto@tudominio.com">contacto@tudominio.com</a></p>
+          <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Sígueme</h3>
+          <ul class="social-links">
+            <li><a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a></li>
+            <li><a href="#" aria-label="GitHub"><i class="icon-github"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Tu Nombre. Todos los derechos reservados.</p>
+        <p class="credits">Diseñado y desarrollado con ❤️ por ti</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/pruebas.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/modernizr.js"></script>
+  <script src="assets/js/app.js" defer></script>
+  
+  <!-- Google Analytics (opcional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-X');
+  </script>
 </body>
 </html>
