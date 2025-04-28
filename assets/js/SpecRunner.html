@@ -2,24 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpecRunner</title>
+  <title>Jasmine Spec Runner</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.css">
+</head>
+<body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine-html.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/boot.min.js"></script>
-</head>
-<body>
-  <h1>Jasmine Test Runner</h1>
-
-  <!-- Agrega las rutas correctas a los archivos de pruebas -->
-  <script src="../js/spec/app.js"></script>
-  <script src="../js/spec/tests.js"></script> <!-- Asegúrate de que este archivo esté presente -->
-
-  <script>
-    // Inicia Jasmine para ejecutar los tests
-    jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
-    jasmine.getEnv().execute();
-  </script>
+  <script src="/PA3_GROUPD/assets/js/app.js"></script>
+  <!-- Cargar aquí todos los archivos de prueba ubicados en spec/support/ -->
+  <script src="/PA3_GROUPD/spec/support/appSpec.js"></script>
+  <script src="/PA3_GROUPD/spec/support/otherSpec.js"></script>
 </body>
 </html>
