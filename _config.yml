@@ -46,6 +46,10 @@ exclude:
   - .vscode
   - .github
   - .github/workflows/*.sample
+  - SpecRunner.html
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
 
 # ===== ENTORNOS =====
 development: &development
