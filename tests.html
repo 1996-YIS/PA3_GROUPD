@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultados de Pruebas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-3.6.0.css">
+</head>
+<body>
+  <h1>Resultados de las Pruebas</h1>
+  <div id="test-results"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-html-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/boot.js"></script>
+  
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/spec/proyectos.spec.js"></script>
+  
+  <script>
+    // Capturar resultados y mostrarlos de forma amigable
+    function showTestResults() {
+      const results = document.createElement('div');
+      results.innerHTML = `
+        <h2>Resumen</h2>
+        <p>Especificaciones ejecutadas: ${jasmine.getEnv().currentRunner().specs().length}</p>
+        <p>Pasadas: ${jasmine.getEnv().currentRunner().results().passedCount}</p>
+        <p>Fallidas: ${jasmine.getEnv().currentRunner().results().failedCount}</p>
+      `;
+      document.getElementById('test-results').appendChild(results);
+    }
+    
+    jasmine.getEnv().addReporter({
+      jasmineDone: showTestResults
+    });
+  </script>
+</body>
+</html>
