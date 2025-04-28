@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Jasmine Spec Runner</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-3.6.0.css">
-  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-3.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/lib/jasmine-html-3.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jasmine@3.6.0/boot.js"></script>
-  
-  <!-- Tus archivos JS y specs -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/spec/proyectos.spec.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpecRunner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine-html.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/boot.min.js"></script>
 </head>
 <body>
+  <h1>Jasmine Test Runner</h1>
+
+  <!-- Agrega las rutas correctas a los archivos de pruebas -->
+  <script src="../js/app.js"></script>
+  <script src="../js/tests.js"></script> <!-- Asegúrate de que este archivo esté presente -->
+
+  <script>
+    // Inicia Jasmine para ejecutar los tests
+    jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
+    jasmine.getEnv().execute();
+  </script>
 </body>
 </html>
