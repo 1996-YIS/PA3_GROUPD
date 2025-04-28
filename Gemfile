@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4"
-gem "minima", "~> 2.5"
-gem "github-pages", "~> 229"
+gem "jekyll", "~> 4.4.1"
+
+group :jekyll_plugins do
+  gem "github-pages", "~> 228", require: "github-pages"
+  gem "faraday-retry"
+end
